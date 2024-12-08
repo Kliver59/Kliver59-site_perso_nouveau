@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node" // Spécifie que le déploiement doit utiliser un serveur Node.js
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)", // Capture toutes les requêtes
+      "dest": "/server.js" // Dirige toutes les requêtes vers le serveur Express
+    }
+  ]
+}
