@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Présentation de mon site</title>
+    <link rel="stylesheet" href="./projet_perso.css" />
+    <script type="module" src="./projet_perso.js"></script>
+  </head>
+
+  <header>
+    <nav class="Nav-Bar">
+      <div class="container">
+        <a href="/projet_perso.html" class="sword-link">Accueil</a>
+        <a href="/liste_de_jeux_vidéos.html" class="sword-link"
+          >Listes de Jeux Vidéos</a
+        >
+        <a href="/liste_de_films_disney.html" class="sword-link"
+          >Listes de Films Disney</a
+        >
+        <a href="/jeux_vidéos.html" class="sword-link"
+          >Présentation des prochains jeux vidéos</a
+        >
+        <a href="/contact.html" class="sword-link">Contactez-nous</a>
+        <form class="search-bar" action="/search" method="GET">
+          <input
+            type="text"
+            name="q"
+            placeholder="Rechercher..."
+            aria-label="Rechercher"
+          />
+          <button type="submit">🔍</button>
+        </form>
+        <div class="sword"></div>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <audio
+      id="background-audio"
+      src="/musiques/sea_of_thieves.mp3"
+      loop
+    ></audio>
+  </body>
+</html>

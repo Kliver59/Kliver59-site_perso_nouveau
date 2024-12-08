@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "AVENGEANCE HEROIC AVENGER";
+  src: url("/fonts/AVENGEANCE\ HEROIC\ AVENGER.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.Nav-Bar {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Positionner au milieu horizontalement */
+  transform: translateX(-50%); /* Centrer la navbar */
+  background-color: transparent;
+  width: fit-content; /* Ajuster la largeur en fonction du contenu */
+  padding: 10px;
+}
+
+/* Styles des éléments de la navbar */
+.Nav-Bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Utiliser flexbox pour aligner les items en ligne */
+}
+
+.Nav-Bar ul li {
+  margin: 0 15px; /* Espacement entre les éléments */
+}
+
+.Nav-Bar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+}
+
+.Nav-Bar ul li a:hover {
+  background-color: #575757;
+}
+
+.Nav-Bar a:hover {
+  color: yellow;
+}
+
+body {
+  font-family: "AVENGEANCE HEROIC AVENGER", sans-serif;
+  font-size: xx-large;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* S'assurer que le body occupe toute la hauteur de la fenêtre */
+  background-image: url("/images/marvel_avengers.jpeg"); /* Remplacer par le chemin de ton image */
+  background-size: cover; /* L'image couvre toute la page sans déformation */
+  background-position: center; /* L'image est centrée */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-attachment: fixed; /* Optionnel : pour que l'image reste fixe lors du défilement */
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.sword {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  width: 50px;
+  height: 50px;
+  background-image: url("/images/2281334.svg"); /* Remplace par ton image d'épée */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 0; /* L'épée est en dessous du texte */
+}
+
+.container:hover .sword {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-250%) rotate(45deg); /* Animation épée monte et tourne */
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+.center-left-video {
+  position: absolute;
+  top: 50%; /* Centrage vertical */
+  left: 0; /* Aligner à gauche */
+  transform: translateY(-50%); /* Ajuster pour centrer précisément */
+  border-radius: 1em;
+}
+
+h3 {
+  color: white;
+}
+
+.video-title {
+  position: absolute;
+  top: 27%; /* Juste au-dessus de la vidéo */
+  left: 0;
+  transform: translateY(-100%);
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px; /* Fond semi-transparent pour meilleure lisibilité */
+  text-align: left;
+  width: 640px; /* Même largeur que la vidéo */
+}

@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url(./images/sea_of_thieves.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.contact-form-container {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  margin: 50px auto;
+  color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-align: center;
+  color: #ff6347;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+button.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6347;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.submit-button:hover {
+  background-color: #ff4500;
+}
+
+/* Pour la Nav-Bar et autres éléments */
+.Nav-Bar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  width: fit-content;
+  padding: 10px;
+}
+
+.Nav-Bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.Nav-Bar ul li {
+  margin: 0 15px;
+}
+
+.Nav-Bar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+}
+
+.Nav-Bar ul li a:hover {
+  background-color: #575757;
+}
+
+.Nav-Bar a:hover {
+  color: red;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.sword-link {
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+}
+
+.sword {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  width: 50px;
+  height: 50px;
+  background-image: url("./images/2281334.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.container:hover .sword {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-250%) rotate(45deg);
+}
+
+.sword-link:hover {
+  color: #ff6347;
+}
+
+.form-message {
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+
+.form-message.success {
+  color: #28a745;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+
+.form-message.error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  display: block;
+}

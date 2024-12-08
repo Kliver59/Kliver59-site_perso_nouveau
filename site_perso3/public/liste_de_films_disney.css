@@ -1,0 +1,218 @@
+.Nav-Bar {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Positionner au milieu horizontalement */
+  transform: translateX(-50%); /* Centrer la navbar */
+  background-color: transparent;
+  width: fit-content; /* Ajuster la largeur en fonction du contenu */
+  padding: 10px;
+}
+
+/* Styles des éléments de la navbar */
+.Nav-Bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Utiliser flexbox pour aligner les items en ligne */
+}
+
+.Nav-Bar ul li {
+  margin: 0 15px; /* Espacement entre les éléments */
+}
+
+.Nav-Bar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+}
+
+.Nav-Bar ul li a:hover {
+  background-color: #575757;
+}
+
+.Nav-Bar a:hover {
+  color: red;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* S'assurer que le body occupe toute la hauteur de la fenêtre */
+  background-image: url("/images/Disney_accueil.jpg"); /* Remplacer par le chemin de ton image */
+  background-size: cover; /* L'image couvre toute la page sans déformation */
+  background-position: center; /* L'image est centrée */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-attachment: fixed; /* Optionnel : pour que l'image reste fixe lors du défilement */
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.sword-link {
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+  position: relative;
+  z-index: 1; /* Le texte doit rester au-dessus de l'épée */
+  padding: 10px;
+}
+
+.sword {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  width: 50px;
+  height: 50px;
+  background-image: url("/images/2281334.svg"); /* Remplace par ton image d'épée */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 0; /* L'épée est en dessous du texte */
+}
+
+.container:hover .sword {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-250%) rotate(45deg); /* Animation épée monte et tourne */
+}
+
+.sword-link:hover {
+  color: #ff6347; /* Change la couleur du lien au survol */
+}
+
+/* Ajouter un espace sous la Nav-Bar pour que la liste apparaisse en dessous */
+.list {
+  margin-top: 80px; /* Ajuste ce nombre en fonction de la taille de la nav-bar */
+}
+
+.list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list ul li {
+  margin: 10px 0;
+}
+
+.list ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.list ul li a:hover {
+  color: #ff6347; /* Changer la couleur au survol pour une meilleure visibilité */
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgb(255, 0, 0);
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  display: block;
+}
+
+.card h3 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.search-bar {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 20px; /* Espacement entre la barre et les liens */
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar input[type="text"]:focus {
+  border-color: #ff6347;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-bar button:hover {
+  background-color: #e5533d;
+}
+
+.hover-video {
+  display: none; /* Masquer la vidéo par défaut */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* S'assurer que la vidéo s'ajuste à la taille de la carte */
+  z-index: 1; /* Placer la vidéo au-dessus de l'image de fond */
+}
+
+.card {
+  position: relative; /* Pour que la vidéo soit correctement positionnée */
+  overflow: hidden; /* Assurer que rien ne dépasse des limites de la carte */
+}
+
+.card:hover .hover-video {
+  display: block; /* Montrer la vidéo au survol */
+}
+
+.card a,
+.card h3,
+.card p {
+  z-index: 2; /* S'assurer que le texte reste au-dessus de la vidéo */
+  position: relative;
+}

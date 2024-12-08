@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Five Fonts at Freddy's";
+  src: url("/fonts/FiveFontsatFreddy's-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.Nav-Bar {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Centrer horizontalement */
+  transform: translateX(-50%); /* Centrer la navbar */
+  background-color: transparent;
+  width: fit-content; /* Ajuster la largeur en fonction du contenu */
+  padding: 10px;
+}
+
+/* Styles des éléments de la navbar */
+.Nav-Bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Utiliser flexbox pour aligner les items en ligne */
+}
+
+.Nav-Bar ul li {
+  margin: 0 15px; /* Espacement entre les éléments */
+}
+
+.Nav-Bar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+}
+
+.Nav-Bar ul li a:hover {
+  background-color: #575757;
+}
+
+.Nav-Bar a:hover {
+  color: yellow;
+}
+
+body {
+  font-family: "Five Fonts at Freddy's", sans-serif;
+  font-size: xx-large;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* S'assurer que le body occupe toute la hauteur de la fenêtre */
+  background-image: url("/images/five_night_at_freddy's.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.sword {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  width: 50px;
+  height: 50px;
+  background-image: url("/images/2281334.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.container:hover .sword {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-250%) rotate(45deg);
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+.center-left-video {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 2em;
+}
+
+h3 {
+  color: white;
+}
+
+.video-title {
+  position: absolute;
+  top: 27%;
+  left: 0;
+  transform: translateY(-100%);
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  width: 640px;
+}
