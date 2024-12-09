@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const noResultsMessage = document.createElement("p");
   noResultsMessage.textContent =
-    "Cette carte est indisponible mais Félix part à sa recherche.";
+    "Cette carte est indisponible mais Pikachu part à sa recherche.";
   noResultsMessageContainer.appendChild(noResultsMessage);
 
   // Ajouter un personnage animé à côté du message
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   walkingCharacter.classList.add("walking-character");
   walkingCharacter.style.width = "500px"; // Largeur du personnage
   walkingCharacter.style.height = "500px"; // Hauteur du personnage
-  walkingCharacter.style.backgroundImage = "url('/images/cat3.gif')"; // Remplacer par l'image du personnage
+  walkingCharacter.style.backgroundImage = "url('/images/pika.gif')"; // Remplacer par l'image du personnage
   walkingCharacter.style.backgroundSize = "contain";
   walkingCharacter.style.backgroundRepeat = "no-repeat";
   walkingCharacter.style.position = "relative"; // Pour qu'il soit à côté du texte
