@@ -72,7 +72,9 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
   z-index: 0; /* L'épée est en dessous du texte */
 }
 
@@ -108,6 +110,7 @@ body {
 .list ul li a:hover {
   color: #ff6347; /* Changer la couleur au survol pour une meilleure visibilité */
 }
+
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -220,4 +223,56 @@ body {
 .card p {
   z-index: 2; /* S'assurer que le texte reste au-dessus de la vidéo */
   position: relative;
+}
+
+/* Message "Aucun résultat" */
+.no-results-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.no-results-message .message {
+  margin-right: 20px; /* Espacement entre le texte et le personnage */
+}
+
+/* Animation du personnage */
+@keyframes walking {
+  0% {
+    transform: translateY(-50%) translateX(0); /* Commencer à gauche */
+  }
+  100% {
+    transform: translateY(-50%) translateX(100%); /* Aller à droite */
+  }
+}
+
+.walking-character {
+  position: relative;
+  top: 50%; /* Centré verticalement */
+  left: 20px; /* Positionner le gif à côté du texte (ajustez selon besoin) */
+  width: 180px; /* Augmentez la taille du gif */
+  height: 180px; /* Augmentez la taille du gif */
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1; /* Le personnage reste au-dessus du texte */
+  display: inline-block; /* Assurez-vous que le gif reste à côté du texte */
+}
+
+/* Personnalisation du message à côté du personnage */
+.no-results-message {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.no-results-message img {
+  margin-right: 10px; /* Espace entre le texte et le personnage */
 }
