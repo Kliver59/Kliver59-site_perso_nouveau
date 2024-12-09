@@ -72,7 +72,9 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
   z-index: 0; /* L'épée est en dessous du texte */
 }
 
@@ -99,6 +101,34 @@ h3 {
 }
 
 .video-title {
+  position: absolute;
+  top: 27%; /* Juste au-dessus de la vidéo */
+  left: 0;
+  transform: translateY(-100%);
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Fond semi-transparent pour meilleure lisibilité */
+  text-align: left;
+  width: 640px; /* Même largeur que la vidéo */
+}
+
+.center-left-video2 {
+  position: absolute;
+  top: 50%; /* Centrage vertical */
+  left: 0; /* Aligner à gauche */
+  transform: translateY(-50%); /* Ajuster pour centrer précisément */
+  border-radius: 2em;
+  border-color: red;
+}
+
+.video-title2 {
   position: absolute;
   top: 27%; /* Juste au-dessus de la vidéo */
   left: 0;
