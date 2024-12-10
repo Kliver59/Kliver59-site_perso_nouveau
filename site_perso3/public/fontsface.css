@@ -1,0 +1,603 @@
+@font-face {
+  font-family: "Trajan Bold";
+  src: url("/fonts/Trajan\ Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sevastopol Interface";
+  src: url("/fonts/Sevastopol-Interface.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Apex";
+  src: url("/fonts/Apex-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Assassin";
+  src: url("/fonts/Assassin$.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OPTIGibbyDFive";
+  src: url("/fonts/optigibbydfive-compressed.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Imperial One Regular";
+  src: url("/fonts/Imperial\ One\ Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "papyrus";
+  src: url("/fonts/papyrus.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BLOODY";
+  src: url("/fonts/BLOODY.TTF") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Saira Extra Condensed";
+  src: url("/fonts/sairaextracondensed-extrabold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cyberpunk";
+  src: url("/fonts/Cyberpunk.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ranger Regular";
+  src: url("/fonts/Ranger_Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Dead Space Title Font";
+  src: url("/fonts/DeadSpaceTitleFont.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gollie";
+  src: url("/fonts/Gollie.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Van Helsing";
+  src: url("/fonts/Van\ Helsing.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amaz Doom Left";
+  src: url("/fonts/AmazDooMLeft.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DOGMA";
+  src: url("/fonts/DOGMA.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "steelfish eb it";
+  src: url("/fonts/steelfish\ eb\ it.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EVILDEAD";
+  src: url("/fonts/EVILDEAD.TTF") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Overseer Italic";
+  src: url("/fonts/Overseer\ Italic.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CGF Locust Resistance";
+  src: url("/fonts/CGF\ Locust\ Resistance.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Ultra Compressed";
+  src: url("/fonts/Helvetica\ Ultra\ Compressed.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Final Fantasy";
+  src: url("/fonts/finalf.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Five Fonts at Freddy's";
+  src: url("/fonts/FiveFontsatFreddy's-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura Extra Black Condensed Italic";
+  src: url("/fonts/Futura\ Extra\ Black\ Condensed\ Italic.otf")
+    format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tsushima";
+  src: url("/fonts/Tsushima.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Eurostile Extended Font";
+  src: url("/fonts/EurostileExtendedBlack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GODOFWAR";
+  src: url("/fonts/GODOFWAR.TTF") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pricedown bl";
+  src: url("/fonts/pricedown\ bl.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sell Your Soul";
+  src: url("/fonts/Sell\ Your\ Soul.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ALIMAN";
+  src: url("/fonts/ALIMAN.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hitman";
+  src: url("/fonts/Hitman.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hogwarts";
+  src: url("/fonts/Hogwarts.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Horizon nMeM";
+  src: url("/fonts/Horizon-nMeM.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quadrat Serial";
+  src: url("/fonts/quadrat-serial-regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura Medium";
+  src: url("/fonts/Futura\ Medium.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Maximilian";
+  src: url("/fonts/Maximilian.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AVENGEANCE HEROIC AVENGER";
+  src: url("/fonts/AVENGEANCE\ HEROIC\ AVENGER.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "andromeda";
+  src: url("/fonts/andromeda.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("/fonts/Minecraft.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mk1";
+  src: url("/fonts/mk1.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playtime";
+  src: url("/fonts/Playtime.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pirulen";
+  src: url("/fonts/pirulen\ rg.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "future";
+  src: url("/fonts/rg-future.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rayman";
+  src: url("/fonts/Rayman.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "chinese rocks rg";
+  src: url("/fonts/chinese\ rocks\ rg.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "resident evil 7";
+  src: url("/fonts/resident_evil_7.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tomb Raider";
+  src: url("/fonts/Tomb_Raider.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "unicode.compacta";
+  src: url("/fonts/unicode.compacta.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BTTTRIAL";
+  src: url("/fonts/BTTTRIAL.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SLNTHLE";
+  src: url("/fonts/SLNTHLE.TTF") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Balgruf";
+  src: url("/fonts/Balgruf.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Monotone";
+  src: url("/fonts/Monotone.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Starjedi";
+  src: url("/fonts/Starjedi.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yagora";
+  src: url("/fonts/Yagora.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graffiti City";
+  src: url("/fonts/Graffiti\ City.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Suicide Squad Font";
+  src: url("/fonts/Suicide\ Squad\ Font.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ghost Clan";
+  src: url("/fonts/ghostclan.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "The Evil Within";
+  src: url("/fonts/The\ Evil\ Within.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Expanse";
+  src: url("/fonts/Expanse.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Dharma Gothic E";
+  src: url("/fonts/DharmaGothicE_Regular_I.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "The Last Of Us";
+  src: url("/fonts/The\ Last\ Of\ Us\ Rough.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Wonderland";
+  src: url("/fonts/Wonderland.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Base 02";
+  src: url("/fonts/Base\ 02.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HACKED";
+  src: url("/fonts/HACKED.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.alien {
+  font-family: "sevastopol interface", "sans serif";
+}
+
+.atomicheart {
+  font-family: "Imperial One Regular", sans-serif;
+}
+
+.callofduty {
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+
+.daysgone {
+  font-family: "Ranger Regular", sans-serif;
+}
+
+.detroit {
+  font-family: "Gollie", sans-serif;
+}
+
+.dishonored {
+  font-family: "Van Helsing", sans-serif;
+}
+
+.doom {
+  font-family: "Amaz Doom Left", sans-serif;
+}
+
+.dogma {
+  font-family: "DOGMA", sans-serif;
+}
+
+.dyinglight {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.masseffect {
+  font-family: "andromeda", sans-serif;
+}
+
+.evilwithin {
+  font-family: "The Evil Within", sans-serif;
+}
+
+.finalfantasy7 {
+  font-family: "Final Fantasy", sans-serif;
+}
+
+.ghostoftsushima {
+  font-family: "Tsushima", sans-serif;
+}
+
+.godofwar {
+  font-family: "GODOFWAR", sans-serif;
+}
+
+.hellblade {
+  font-family: "Sell Your Soul", sans-serif;
+}
+
+.highonlife {
+  font-family: "ALIMAN", sans-serif;
+}
+
+.hitman {
+  font-family: "Hitman", sans-serif;
+}
+
+.hogwarts {
+  font-family: "Hogwarts", sans-serif;
+}
+
+.forbiddenwest {
+  font-family: "Horizon nMeM", sans-serif;
+}
+
+.injustice {
+  font-family: "Futura Medium", sans-serif;
+}
+
+.deliverance {
+  font-family: "Maximilian", sans-serif;
+}
+
+.avengers {
+  font-family: "AVENGEANCE HEROIC AVENGER", sans-serif;
+}
+
+.kombat {
+  font-family: "mk1", sans-serif;
+}
+
+.plague {
+  font-family: "Trajan Bold", sans-serif;
+}
+
+.playtime {
+  font-family: "Playtime", sans-serif;
+}
+
+.quantumbreak {
+  font-family: "Pirulen", sans-serif;
+}
+
+.ratchet {
+  font-family: "future", sans-serif;
+}
+
+.resident {
+  font-family: "resident evil 7", sans-serif;
+}
+
+.tombraider {
+  font-family: "Tomb Raider", sans-serif;
+}
+
+.dogs {
+  font-family: "Monotone", sans-serif;
+}
+
+.starwars {
+  font-family: "Starjedi", sans-serif;
+}
+
+.starfield {
+  font-family: "Yagora", sans-serif;
+}
+
+.stray {
+  font-family: "Graffiti City", sans-serif;
+}
+
+.squad {
+  font-family: "Suicide Squad Font", sans-serif;
+}
+
+.tinytina {
+  font-family: "Wonderland", sans-serif;
+}
+
+.uncharted {
+  font-family: "Base 02", sans-serif;
+}
+
+.skyrim {
+  font-family: "Balgruf", sans-serif;
+}
