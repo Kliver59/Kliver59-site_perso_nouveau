@@ -4,7 +4,6 @@ import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 
-// Détermine le répertoire courant
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -13,52 +12,30 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
-
-// Utilisation de __dirname pour accéder aux fichiers statiques
 app.use(express.static(path.join(__dirname, "public")));
 
-// Données de quiz
-const questions = [
-  {
-    question:
-      "Quel personnage est le protagoniste principal de 'The Legend of Zelda' ?",
-    options: ["Link", "Mario", "Samus"],
-    correctAnswer: "A",
-  },
-  {
-    question:
-      "Dans quel jeu vidéo trouve-t-on la célèbre phrase 'It's-a me, Mario!' ?",
-    options: ["Mario Bros", "Sonic", "Zelda"],
-    correctAnswer: "A",
-  },
-  {
-    question: "Quel est le nom du monde dans 'Minecraft' ?",
-    options: ["The End", "Nether", "Overworld"],
-    correctAnswer: "C",
-  },
-  {
-    question:
-      "Dans quel jeu vidéo doit-on affronter des zombies et des créatures horribles dans un manoir ?",
-    options: ["Resident Evil", "Dead Space", "Halo"],
-    correctAnswer: "A",
-  },
-];
+// Liste des scores
+let scores = [];
 
-// Route pour la page d'accueil
+// Routes pour servir le jeu
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "projet_perso.html"));
 });
 
-// Route pour obtenir les questions du quiz
-app.get("/api/questions", (req, res) => {
-  res.json(questions);
+// Route pour enregistrer un score
+app.post("/api/score", (req, res) => {
+  const { player, score } = req.body;
+  if (player && score !== undefined) {
+    scores.push({ player, score });
+    res.json({ message: "Score enregistré avec succès" });
+  } else {
+    res.status(400).json({ message: "Nom du joueur et score requis" });
+  }
 });
 
-// Route pour soumettre le score
-app.post("/api/score", (req, res) => {
-  const { score } = req.body;
-  console.log(`Le score soumis est : ${score}`);
-  res.json({ message: "Score enregistré avec succès" });
+// Route pour récupérer tous les scores
+app.get("/api/scores", (req, res) => {
+  res.json(scores.sort((a, b) => b.score - a.score)); // Classement par score décroissant
 });
 
 // Démarrer le serveur
@@ -73,4 +50,4 @@ const startServer = async () => {
   }
 };
 
-startServer(); // Lancer le serveur
+startServer();
