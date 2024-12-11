@@ -37,12 +37,19 @@
   </header>
 
   <body>
-    <div id="game-container" class="container">
-      <h1>Mario Invaders</h1>
-      <canvas id="space-invaders" width="600" height="400"></canvas>
-      <p id="score">Score : 0</p>
-      <button id="next-level" style="display: none">Niveau suivant</button>
-      <!-- Le bouton est caché au départ -->
+    <div class="main-container">
+      <!-- Conteneur du jeu -->
+      <div id="game-container" class="container">
+        <h1>Mario Invaders</h1>
+        <canvas id="space-invaders" width="600" height="400"></canvas>
+        <button id="next-level" style="display: none">Niveau suivant</button>
+      </div>
+
+      <!-- Conteneur des scores -->
+      <div id="score-container">
+        <h2>Scoreboard</h2>
+        <p id="score">Score : 0</p>
+      </div>
     </div>
     <audio id="background-audio" src="/audio/background.mp3" loop></audio>
   </body>

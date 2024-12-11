@@ -30,7 +30,7 @@ bulletImage.src = "/images/egg.png"; // Remplacez par le chemin correct vers vot
 
 const player = {
   x: canvas.width / 2 - 15,
-  y: canvas.height - 55,
+  y: canvas.height - 70,
   width: 70, // Dimensions ajustées pour l'image
   height: 70, // Dimensions ajustées pour l'image
   speed: 5,
