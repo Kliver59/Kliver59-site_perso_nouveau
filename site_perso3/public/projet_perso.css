@@ -154,3 +154,48 @@ button:active {
   color: #ffffff;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
+
+/* Styles for Play button and Countdown */
+#play-button {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#play-button:hover {
+  background-color: #218838;
+}
+
+#countdown {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffd700;
+  margin-top: 20px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+#level-display {
+  font-size: 40px;
+  font-weight: bold;
+  color: yellow;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: fade-in-out 2s ease-in-out;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
