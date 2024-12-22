@@ -68,6 +68,62 @@
       </div>
     </main>
 
+    <div id="auth-container" class="auth-container">
+      <div class="auth-card">
+        <div id="login-section" class="auth-section">
+          <h2>Connexion</h2>
+          <form id="login-form">
+            <input
+              type="text"
+              id="username"
+              class="auth-input"
+              placeholder="Nom d'utilisateur"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              class="auth-input"
+              placeholder="Mot de passe"
+              required
+            />
+            <button type="submit" class="auth-button">Se connecter</button>
+          </form>
+          <p class="auth-switch">
+            Pas encore inscrit ?
+            <a href="#" id="switch-to-register">Créer un compte</a>
+          </p>
+        </div>
+
+        <div id="register-section" class="auth-section hidden">
+          <h2>Inscription</h2>
+          <form id="register-form">
+            <input
+              type="text"
+              id="register-username"
+              class="auth-input"
+              placeholder="Nom d'utilisateur"
+              required
+            />
+            <input
+              type="password"
+              id="register-password"
+              class="auth-input"
+              placeholder="Mot de passe"
+              required
+            />
+            <button type="submit" class="auth-button">S'inscrire</button>
+          </form>
+          <p class="auth-switch">
+            Déjà inscrit ? <a href="#" id="switch-to-login">Se connecter</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
     <audio id="background-audio" src="/audio/background.mp3" loop></audio>
   </body>
 </html>

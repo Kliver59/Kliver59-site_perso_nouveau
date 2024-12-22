@@ -25,25 +25,29 @@
     </header>
     <audio id="background-audio" src="/" loop></audio>
 
-    <h1 class="video-title">Alien Isolation - Trailer de Lancement</h1>
+    <h1 class="video-title">Alien Isolation - Gameplay Preview</h1>
 
-    <video class="center-left-video" width="640" height="360" controls>
-      <source
-        src="/vidéos/ALIEN ISOLATION Trailer de Lancement VF [Version Longue].mp4"
-        type="video/mp4"
-      />
-      Votre navigateur ne supporte pas la balise vidéo.
-    </video>
+    <!-- Conteneur pour le personnage et la vidéo -->
+    <div class="container-with-animation">
+      <!-- Personnage -->
+      <div class="personnage-container">
+        <img
+          class="personnage"
+          src="/images/personnage.png"
+          alt="Personnage qui pousse la vidéo"
+        />
+      </div>
 
-    <h1 class="video-title2">Alien Isolation - Gameplay Preview</h1>
-    <iframe
-      class="center-left-video2"
-      width="640"
-      height="360"
-      src="https://www.youtube.com/embed/ALER_orYhlg"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
+      <!-- Vidéo -->
+      <iframe
+        class="center-left-video"
+        width="640"
+        height="360"
+        src="https://www.youtube.com/embed/ALER_orYhlg"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
   </body>
 </html>

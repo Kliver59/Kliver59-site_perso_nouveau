@@ -285,3 +285,61 @@ function displayLevel() {
     levelDisplay.style.display = "none";
   }, 2000);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loginSection = document.getElementById("login-section");
+  const registerSection = document.getElementById("register-section");
+  const switchToRegister = document.getElementById("switch-to-register");
+  const switchToLogin = document.getElementById("switch-to-login");
+
+  // Afficher la section inscription
+  switchToRegister.addEventListener("click", (e) => {
+    e.preventDefault();
+    loginSection.classList.add("hidden");
+    registerSection.classList.remove("hidden");
+  });
+
+  // Afficher la section connexion
+  switchToLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    registerSection.classList.add("hidden");
+    loginSection.classList.remove("hidden");
+  });
+});
+
+window.onload = function () {
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+  }, 1000); // 1 seconde, ajustez selon vos besoins
+};
+
+// Vous pouvez aussi ajouter des effets de chargement pour des requêtes spécifiques
+function showLoading() {
+  document.getElementById("loader").style.display = "flex";
+}
+
+function hideLoading() {
+  document.getElementById("loader").style.display = "none";
+}
+
+function login() {
+  showLoading(); // Afficher le loader
+
+  fetch("/api/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ username: "user", password: "password" }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      hideLoading(); // Cacher le loader une fois la réponse reçue
+    })
+    .catch((error) => {
+      console.error("Erreur:", error);
+      hideLoading();
+    });
+}
