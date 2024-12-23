@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -26,6 +26,7 @@
         <a href="/contact.html" class="sword-link">Contactez-nous</a>
         <div class="sword"></div>
       </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     </nav>
   </header>
   <body>
@@ -35,13 +36,14 @@
       loop
     ></audio>
     <h1 class="video-title">Hitman World Of Assassination - Presentation</h1>
-
-    <video class="center-left-video" width="640" height="360" controls>
-      <source
-        src="/vidéos/HITMAN World of Assassination - Launch Trailer.mp4"
-        type="video/mp4"
-      />
-      Votre navigateur ne supporte pas la balise vidéo.
-    </video>
+    <div class="content-container">
+      <video class="center-video" width="640" height="360" controls>
+        <source
+          src="/vidéos/HITMAN World of Assassination - Launch Trailer.mp4"
+          type="video/mp4"
+        />
+        Votre navigateur ne supporte pas la balise vidéo.
+      </video>
+    </div>
   </body>
 </html>
