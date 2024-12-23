@@ -44,3 +44,8 @@ document.querySelectorAll(".card").forEach((card) => {
     }
   });
 });
+
+document.querySelector(".menu-toggle").addEventListener("click", () => {
+  const navBar = document.querySelector(".Nav-Bar");
+  navBar.classList.toggle("open");
+});
