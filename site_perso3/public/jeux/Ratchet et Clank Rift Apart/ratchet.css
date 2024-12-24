@@ -6,40 +6,61 @@
 }
 
 .Nav-Bar {
-  position: absolute;
-  top: 0;
-  left: 50%; /* Positionner au milieu horizontalement */
-  transform: translateX(-50%); /* Centrer la navbar */
-  background-color: transparent;
-  width: fit-content; /* Ajuster la largeur en fonction du contenu */
-  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Styles des éléments de la navbar */
-.Nav-Bar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex; /* Utiliser flexbox pour aligner les items en ligne */
+.Nav-Bar .container {
+  display: flex;
+  gap: 15px;
 }
 
-.Nav-Bar ul li {
-  margin: 0 15px; /* Espacement entre les éléments */
-}
-
-.Nav-Bar ul li a {
+.Nav-Bar a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   padding: 8px 16px;
 }
 
-.Nav-Bar ul li a:hover {
+.Nav-Bar a:hover {
   background-color: #575757;
+  color: yellow;
 }
 
-.Nav-Bar a:hover {
-  color: yellow;
+/* Bouton de menu pour le responsive */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Animation de l'épée */
+.sword {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  width: 50px;
+  height: 50px;
+  background-image: url("/images/2281334.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.container:hover .sword {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-250%) rotate(45deg);
 }
 
 body {
@@ -55,58 +76,72 @@ body {
   background-attachment: fixed; /* Optionnel : pour que l'image reste fixe lors du défilement */
 }
 
-.container {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
-.sword {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(-150%);
-  width: 50px;
-  height: 50px;
-  background-image: url("/images/2281334.svg"); /* Remplace par ton image d'épée */
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  z-index: 0; /* L'épée est en dessous du texte */
-}
-
-.container:hover .sword {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-250%) rotate(45deg); /* Animation épée monte et tourne */
-}
-
-a {
-  text-decoration: none;
-  color: red;
-}
-
-.center-left-video {
-  position: absolute;
-  top: 50%; /* Centrage vertical */
-  left: 0; /* Aligner à gauche */
-  transform: translateY(-50%); /* Ajuster pour centrer précisément */
-  border-radius: 1em;
-}
-
-h3 {
-  color: white;
-}
-
 .video-title {
-  position: absolute;
-  top: 27%; /* Juste au-dessus de la vidéo */
-  left: 0;
-  transform: translateY(-100%);
+  margin: 20px auto;
+  text-align: center;
   color: white;
   font-size: 1em;
   font-weight: bold;
-  padding: 10px; /* Fond semi-transparent pour meilleure lisibilité */
-  text-align: left;
-  width: 640px; /* Même largeur que la vidéo */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  max-width: 640px;
+  border-radius: 8px;
+}
+
+/* Conteneur principal pour la vidéo et le personnage */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Vidéo avec ses dimensions originales */
+.center-video {
+  border-radius: 2em;
+  width: 640px;
+  height: 360px;
+}
+
+@media (max-width: 768px) {
+  .Nav-Bar .container {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .Nav-Bar.open .container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .center-video {
+    width: 90%;
+    height: auto;
+  }
+
+  .video-title {
+    font-size: 1.2em;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-title {
+    font-size: 1em;
+  }
+
+  .Nav-Bar a {
+    font-size: 20px;
+  }
 }
