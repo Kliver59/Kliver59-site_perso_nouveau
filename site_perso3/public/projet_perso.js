@@ -286,60 +286,94 @@ function displayLevel() {
   }, 2000);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loginSection = document.getElementById("login-section");
-  const registerSection = document.getElementById("register-section");
-  const switchToRegister = document.getElementById("switch-to-register");
-  const switchToLogin = document.getElementById("switch-to-login");
+document.addEventListener("DOMContentLoaded", function () {
+  // Références aux éléments
+  const authContainer = document.getElementById("auth-container");
+  const registerContainer = document.getElementById("register-container");
+  const loginButton = document.getElementById("login-button");
+  const registerButton = document.getElementById("register-button");
+  const usernameInput = document.getElementById("username");
+  const passwordInput = document.getElementById("password");
+  const newUsernameInput = document.getElementById("new-username");
+  const newPasswordInput = document.getElementById("new-password");
+  const registerLink = document.getElementById("register-link");
+  const loginLink = document.getElementById("login-link");
 
-  // Afficher la section inscription
-  switchToRegister.addEventListener("click", (e) => {
-    e.preventDefault();
-    loginSection.classList.add("hidden");
-    registerSection.classList.remove("hidden");
+  // Utilisateur fictif (en attendant d'avoir une base de données)
+  const userCredentials = {
+    username: "user123",
+    password: "password123",
+  };
+
+  // Fonction de connexion
+  loginButton.addEventListener("click", function () {
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    if (
+      username === userCredentials.username &&
+      password === userCredentials.password
+    ) {
+      // Connexion réussie
+      alert("Connexion réussie !");
+      authContainer.classList.add("hidden");
+      // Démarrer le jeu ou afficher le contenu principal
+      // Afficher le jeu ici, par exemple, en affichant la section de jeu
+    } else {
+      alert("Nom d'utilisateur ou mot de passe incorrect.");
+    }
   });
 
-  // Afficher la section connexion
-  switchToLogin.addEventListener("click", (e) => {
-    e.preventDefault();
-    registerSection.classList.add("hidden");
-    loginSection.classList.remove("hidden");
+  // Fonction d'inscription (exemple basique)
+  registerButton.addEventListener("click", function () {
+    const newUsername = newUsernameInput.value;
+    const newPassword = newPasswordInput.value;
+
+    // Stockage temporaire d'un utilisateur fictif (normalement vous enverriez ceci à un serveur)
+    userCredentials.username = newUsername;
+    userCredentials.password = newPassword;
+
+    alert("Inscription réussie !");
+    // Passer à l'écran de connexion
+    registerContainer.classList.add("hidden");
+    authContainer.classList.remove("hidden");
+  });
+
+  // Événements de navigation entre inscription et connexion
+  registerLink.addEventListener("click", function () {
+    authContainer.classList.add("hidden");
+    registerContainer.classList.remove("hidden");
+  });
+
+  loginLink.addEventListener("click", function () {
+    registerContainer.classList.add("hidden");
+    authContainer.classList.remove("hidden");
   });
 });
 
-window.onload = function () {
-  setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("main-content").style.display = "block";
-  }, 1000); // 1 seconde, ajustez selon vos besoins
-};
-
-// Vous pouvez aussi ajouter des effets de chargement pour des requêtes spécifiques
-function showLoading() {
-  document.getElementById("loader").style.display = "flex";
-}
-
-function hideLoading() {
-  document.getElementById("loader").style.display = "none";
-}
-
-function login() {
-  showLoading(); // Afficher le loader
-
-  fetch("/api/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ username: "user", password: "password" }),
+fetch("http://localhost:3000/api/login", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    username: usernameInput.value,
+    password: passwordInput.value,
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    if (data.token) {
+      // Stocker le token JWT dans le localStorage
+      localStorage.setItem("token", data.token);
+      console.log("Token reçu:", data.token);
+      authContainer.classList.add("hidden"); // Cache le formulaire de connexion
+      // Vous pouvez ajouter des actions pour afficher le jeu ou d'autres sections
+    } else {
+      alert("Identifiants incorrects.");
+    }
   })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      hideLoading(); // Cacher le loader une fois la réponse reçue
-    })
-    .catch((error) => {
-      console.error("Erreur:", error);
-      hideLoading();
-    });
-}
+  .catch((error) => {
+    console.error("Erreur d'authentification:", error);
+    alert("Une erreur est survenue, veuillez réessayer.");
+  });

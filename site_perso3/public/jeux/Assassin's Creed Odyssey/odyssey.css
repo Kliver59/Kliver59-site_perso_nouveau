@@ -6,6 +6,7 @@
 }
 
 .Nav-Bar {
+  cursor: url("/images/assassins.png"), auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,6 +27,7 @@
 }
 
 .Nav-Bar a:hover {
+  cursor: url("/images/assassins2.png"), auto;
   background-color: #575757;
   color: yellow;
 }
@@ -64,16 +66,17 @@
 }
 
 body {
+  cursor: url("/images/assassins.png"), auto;
   font-family: "Assassin", sans-serif;
   font-size: xx-large;
   margin: 0;
   padding: 0;
-  height: 100vh; /* S'assurer que le body occupe toute la hauteur de la fenêtre */
-  background-image: url("/images/assassin_creed_odyssey.jpg"); /* Remplacer par le chemin de ton image */
-  background-size: cover; /* L'image couvre toute la page sans déformation */
-  background-position: center; /* L'image est centrée */
-  background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  background-attachment: fixed; /* Optionnel : pour que l'image reste fixe lors du défilement */
+  height: 100vh;
+  background-image: url("/images/assassin_creed_odyssey.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .video-title {
@@ -144,4 +147,8 @@ body {
   .Nav-Bar a {
     font-size: 20px;
   }
+}
+
+#iframe {
+  cursor: url("/images/assassins2.png"), auto;
 }

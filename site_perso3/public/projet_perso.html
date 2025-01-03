@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="./projet_perso.css" />
     <script type="module" src="./projet_perso.js" defer></script>
   </head>
-
   <body>
+    <!-- Header -->
     <header>
-      <nav class="Nav-Bar">
+      <nav class="nav-bar">
         <div class="container">
-          <a href="/projet_perso.html" class="sword-link">Accueil</a>
-          <a href="/liste_de_jeux_vidéos.html" class="sword-link"
-            >Listes de Jeux Vidéos</a
+          <a href="./projet_perso.html" class="nav-link">Accueil</a>
+          <a href="./liste_de_jeux_vidéos.html" class="nav-link"
+            >Liste de Jeux Vidéos</a
           >
-          <a href="/liste_de_films_disney.html" class="sword-link"
-            >Listes de Films Disney</a
+          <a href="./liste_de_films_disney.html" class="nav-link"
+            >Liste de Films Disney</a
           >
-          <a href="/jeux_vidéos.html" class="sword-link"
-            >Présentation des prochains jeux vidéos</a
+          <a href="./jeux_vidéos.html" class="nav-link"
+            >Prochains Jeux Vidéos</a
           >
-          <a href="/contact.html" class="sword-link">Contactez-nous</a>
+          <a href="./contact.html" class="nav-link">Contactez-nous</a>
           <form class="search-bar" action="/search" method="GET">
             <input
               type="text"
@@ -36,94 +36,26 @@
       </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
-      <div class="main-container">
-        <!-- Conteneur du jeu -->
+      <section class="game-section">
         <div id="game-container" class="container">
           <h1>Mario Invaders</h1>
           <canvas id="space-invaders" width="600" height="400"></canvas>
-          <button id="play-button">Play</button>
-          <button id="next-level" style="display: none">Niveau suivant</button>
-          <button id="retry-button" style="display: none">Réessayer</button>
-          <div
-            id="level-display"
-            style="
-              display: none;
-              font-size: 30px;
-              color: white;
-              text-align: center;
-              margin-bottom: 10px;
-            "
-          >
-            Level 1
-          </div>
-          <div id="countdown" style="display: none">3</div>
+          <button id="play-button">Jouer</button>
+          <button id="next-level" class="hidden">Niveau Suivant</button>
+          <button id="retry-button" class="hidden">Réessayer</button>
+          <div id="level-display" class="level-display hidden">Level 1</div>
+          <div id="countdown" class="countdown hidden">3</div>
         </div>
-
-        <!-- Conteneur des scores -->
-        <div id="score-container">
-          <h2>Scoreboard</h2>
+        <aside id="score-container" class="score-container">
+          <h2>Tableau des Scores</h2>
           <p id="score">Score : 0</p>
-        </div>
-      </div>
+        </aside>
+      </section>
     </main>
 
-    <div id="auth-container" class="auth-container">
-      <div class="auth-card">
-        <div id="login-section" class="auth-section">
-          <h2>Connexion</h2>
-          <form id="login-form">
-            <input
-              type="text"
-              id="username"
-              class="auth-input"
-              placeholder="Nom d'utilisateur"
-              required
-            />
-            <input
-              type="password"
-              id="password"
-              class="auth-input"
-              placeholder="Mot de passe"
-              required
-            />
-            <button type="submit" class="auth-button">Se connecter</button>
-          </form>
-          <p class="auth-switch">
-            Pas encore inscrit ?
-            <a href="#" id="switch-to-register">Créer un compte</a>
-          </p>
-        </div>
-
-        <div id="register-section" class="auth-section hidden">
-          <h2>Inscription</h2>
-          <form id="register-form">
-            <input
-              type="text"
-              id="register-username"
-              class="auth-input"
-              placeholder="Nom d'utilisateur"
-              required
-            />
-            <input
-              type="password"
-              id="register-password"
-              class="auth-input"
-              placeholder="Mot de passe"
-              required
-            />
-            <button type="submit" class="auth-button">S'inscrire</button>
-          </form>
-          <p class="auth-switch">
-            Déjà inscrit ? <a href="#" id="switch-to-login">Se connecter</a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div id="loader">
-      <div class="spinner"></div>
-    </div>
-
+    <!-- Background Audio -->
     <audio id="background-audio" src="/audio/background.mp3" loop></audio>
   </body>
 </html>

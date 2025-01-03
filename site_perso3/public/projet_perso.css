@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("/images/manette.jpg"); /* Remplacer par ton image */
+  background-image: url("/images/manette.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,13 +47,6 @@ h1 {
   text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
 }
 
-#game-over-text {
-  font-size: 32px;
-  color: red;
-  font-weight: bold;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-}
-
 button {
   padding: 10px 20px;
   background-color: #ff6347;
@@ -74,7 +67,8 @@ button:active {
   transform: scale(0.98);
 }
 
-.Nav-Bar {
+/* Navbar */
+.nav-bar {
   position: absolute;
   top: 20px;
   left: 50%;
@@ -82,41 +76,54 @@ button:active {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 10px 20px;
   border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1100px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
-.Nav-Bar a {
+.nav-bar a {
   color: white;
   font-size: 18px;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.Nav-Bar a:hover {
+.nav-bar a:hover {
   color: #ff6347;
 }
 
-.Nav-Bar a:active {
+.nav-bar a:active {
   color: #e5533d;
 }
 
-.sword {
-  opacity: 0;
-  transition:
-    opacity 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
-}
-
-.container:hover .sword {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-150%) rotate(45deg);
-}
-
-.main-container {
+.search-bar {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #e5533d;
 }
 
 #score-container {
