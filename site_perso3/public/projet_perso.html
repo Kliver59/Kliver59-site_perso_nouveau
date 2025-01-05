@@ -6,6 +6,7 @@
     <title>Space Invaders - Jeu Vidéo</title>
     <link rel="stylesheet" href="./projet_perso.css" />
     <script type="module" src="./projet_perso.js" defer></script>
+    <script src="https://upload.cloudinary.com/global/all.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -32,6 +33,15 @@
             />
             <button type="submit">🔍</button>
           </form>
+
+          <!-- Avatar, nom d'utilisateur et bouton de déconnexion dans la navbar -->
+          <div class="user-info">
+            <img id="user-avatar" src="" alt="Avatar" class="avatar-navbar" />
+            <span id="user-name" class="user-name-navbar"></span>
+            <button id="logout-button" class="logout-button hidden">
+              Se déconnecter
+            </button>
+          </div>
         </div>
       </nav>
     </header>
@@ -55,7 +65,48 @@
       </section>
     </main>
 
-    <!-- Background Audio -->
-    <audio id="background-audio" src="/audio/background.mp3" loop></audio>
+    <!-- Authentication Container -->
+    <div id="auth-container" class="auth-container">
+      <div class="auth-card">
+        <h2 id="auth-header">Connectez-vous</h2>
+
+        <form id="auth-form">
+          <div class="auth-section">
+            <input
+              type="text"
+              id="username-input"
+              class="auth-input"
+              name="username"
+              placeholder="Nom d'utilisateur"
+              required
+            />
+            <input
+              type="password"
+              id="password-input"
+              class="auth-input"
+              name="password"
+              placeholder="Mot de passe"
+              required
+            />
+            <button type="submit" id="auth-button" class="auth-button">
+              Se connecter
+            </button>
+          </div>
+        </form>
+        <p id="auth-message" class="auth-message"></p>
+      </div>
+    </div>
+
+    <!-- Avatar Section (Visible après connexion) -->
+    <div id="user-avatar-section" class="user-avatar-section hidden">
+      <img id="user-avatar" src="" alt="Avatar" class="avatar-image" />
+      <p id="user-name" class="user-name"></p>
+      <input
+        type="file"
+        id="avatar-upload"
+        class="avatar-upload"
+        accept="image/*"
+      />
+    </div>
   </body>
 </html>

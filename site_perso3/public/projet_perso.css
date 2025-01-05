@@ -14,6 +14,86 @@ body {
   color: white;
 }
 
+/* Container pour le contenu */
+.container {
+  width: 80%;
+  max-width: 1100px;
+}
+
+/* Header & Navbar */
+.nav-bar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1100px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+/* Links dans navbar */
+.nav-bar a {
+  color: white;
+  font-size: 18px;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+  color: #ff6347;
+}
+
+/* Avatar et bouton de déconnexion dans la navbar */
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-navbar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name-navbar {
+  font-size: 16px;
+  margin-right: 15px;
+  color: white;
+}
+
+/* Bouton de déconnexion */
+.logout-button {
+  background-color: #dc3545;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/* Game Section */
+.game-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 #game-container {
   display: flex;
   flex-direction: column;
@@ -24,6 +104,8 @@ body {
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  width: 80%;
+  max-width: 600px;
 }
 
 canvas {
@@ -40,15 +122,8 @@ h1 {
   color: #ff6347;
 }
 
-#score {
-  font-size: 24px;
-  color: #ffd700;
-  margin-top: 20px;
-  text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
-}
-
 button {
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #ff6347;
   border: none;
   border-radius: 5px;
@@ -67,65 +142,7 @@ button:active {
   transform: scale(0.98);
 }
 
-/* Navbar */
-.nav-bar {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  max-width: 1100px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-}
-
-.nav-bar a {
-  color: white;
-  font-size: 18px;
-  margin: 0 15px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-bar a:hover {
-  color: #ff6347;
-}
-
-.nav-bar a:active {
-  color: #e5533d;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-}
-
-.search-bar input {
-  padding: 5px 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-}
-
-.search-bar button {
-  padding: 5px 10px;
-  background-color: #ff6347;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.search-bar button:hover {
-  background-color: #e5533d;
-}
-
+/* Score Container */
 #score-container {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
@@ -134,6 +151,7 @@ button:active {
   color: white;
   text-align: center;
   min-width: 200px;
+  margin-top: 20px;
 }
 
 #score-container h2 {
@@ -148,21 +166,7 @@ button:active {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
-#play-button {
-  padding: 15px 30px;
-  font-size: 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-#play-button:hover {
-  background-color: #218838;
-}
-
+/* Countdown */
 #countdown {
   font-size: 48px;
   font-weight: bold;
@@ -171,6 +175,7 @@ button:active {
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
+/* Level Display */
 #level-display {
   font-size: 40px;
   font-weight: bold;
@@ -192,71 +197,60 @@ button:active {
   }
 }
 
+/* Authentication */
 .auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #1e1e2f;
-  padding: 20px;
+  position: fixed; /* Positionne le formulaire de manière fixe */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 .auth-card {
   background: #2e2e3f;
-  padding: 20px 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   text-align: center;
-}
-
-.auth-section {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.hidden {
-  display: none;
+  width: 100%;
+  max-width: 400px; /* Limite la largeur du formulaire de connexion */
 }
 
 .auth-input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #444;
+  margin: 10px 0;
   border-radius: 5px;
-  background-color: #3e3e4f;
-  color: #fff;
-  font-size: 16px;
+  border: 1px solid #ddd;
+  background: #333;
+  color: white;
 }
 
 .auth-button {
-  background-color: #4caf50;
+  width: 100%;
+  padding: 12px;
+  background: #ff6347;
   color: white;
   border: none;
-  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
 }
 
 .auth-button:hover {
-  background-color: #45a049;
+  background: #e5533d;
 }
 
-.auth-switch {
-  color: #ccc;
+.auth-message {
+  margin-top: 15px;
   font-size: 14px;
+  color: #ff6347;
 }
 
-.auth-switch a {
-  color: #4caf50;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.auth-switch a:hover {
-  text-decoration: underline;
+.hidden {
+  display: none;
 }

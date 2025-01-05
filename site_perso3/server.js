@@ -1,157 +1,68 @@
 import express from "express";
-import bodyParser from "body-parser";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
-import fs from "fs";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import fs from "fs";
 
-// Charger les variables d'environnement
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-
-// Middleware
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 
-// Secret pour les tokens JWT
-const JWT_SECRET = process.env.JWT_SECRET;
-if (!JWT_SECRET) {
-  throw new Error("La variable d'environnement JWT_SECRET est manquante.");
-}
+// Simuler une base de données d'utilisateurs en mémoire
+let users = [];
 
-// Fichier pour stocker les utilisateurs
-const USERS_FILE = path.join(__dirname, "users.json");
+// Route pour enregistrer un nouvel utilisateur
+app.post("/register", (req, res) => {
+  const { username, password } = req.body;
 
-// Chargement des utilisateurs (ou création d'un fichier vide si nécessaire)
-const loadUsers = () => {
-  try {
-    if (!fs.existsSync(USERS_FILE)) {
-      fs.writeFileSync(USERS_FILE, JSON.stringify([]));
-    }
-    return JSON.parse(fs.readFileSync(USERS_FILE, "utf-8"));
-  } catch (error) {
-    console.error("Erreur lors du chargement des utilisateurs:", error);
-    return [];
-  }
-};
-
-// Sauvegarde des utilisateurs dans le fichier
-const saveUsers = (users) => {
-  try {
-    fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
-  } catch (error) {
-    console.error("Erreur lors de la sauvegarde des utilisateurs:", error);
-  }
-};
-
-// Validation des entrées utilisateur
-const validateInput = (username, password) => {
+  // Vérifier si les champs sont bien présents
   if (!username || !password) {
-    return {
-      valid: false,
-      message: "Nom d'utilisateur et mot de passe requis.",
-    };
+    return res
+      .status(400)
+      .json({ message: "Nom d'utilisateur et mot de passe sont requis." });
   }
-  if (username.length < 3) {
-    return { valid: false, message: "Nom d'utilisateur trop court." };
+
+  // Vérifier si l'utilisateur existe déjà
+  const existingUser = users.find((user) => user.username === username);
+  if (existingUser) {
+    return res.status(400).json({ message: "L'utilisateur existe déjà." });
   }
-  if (password.length < 6) {
-    return {
-      valid: false,
-      message: "Le mot de passe doit contenir au moins 6 caractères.",
-    };
-  }
-  return { valid: true };
-};
 
-// Inscription
-app.post("/api/register", async (req, res) => {
-  try {
-    const { username, password } = req.body;
-    const { valid, message } = validateInput(username, password);
+  // Ajouter l'utilisateur à la "base de données" (tableau en mémoire)
+  const newUser = { username, password }; // Ici, on stocke le mot de passe en clair pour simplifier, mais ce n'est pas sécurisé
+  users.push(newUser);
 
-    if (!valid) {
-      return res.status(400).json({ message });
-    }
-
-    const users = loadUsers();
-    const userExists = users.find((user) => user.username === username);
-
-    if (userExists) {
-      return res
-        .status(409)
-        .json({ message: "Nom d'utilisateur déjà utilisé." });
-    }
-
-    const hashedPassword = await bcrypt.hash(password, 10);
-    users.push({ username, password: hashedPassword });
-    saveUsers(users);
-
-    res.status(201).json({ message: "Utilisateur créé avec succès." });
-  } catch (error) {
-    console.error("Erreur lors de l'inscription:", error);
-    res.status(500).json({ message: "Erreur interne du serveur." });
-  }
+  res.status(201).json({ message: "Utilisateur créé avec succès." });
 });
 
-// Connexion
-app.post("/api/login", async (req, res) => {
-  try {
-    const { username, password } = req.body;
-    const { valid, message } = validateInput(username, password);
+// Route pour authentifier un utilisateur (pour simplification, une authentification basique)
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
 
-    if (!valid) {
-      return res.status(400).json({ message });
-    }
-
-    const users = loadUsers();
-    const user = users.find((u) => u.username === username);
-
-    if (!user || !(await bcrypt.compare(password, user.password))) {
-      return res
-        .status(401)
-        .json({ message: "Nom d'utilisateur ou mot de passe incorrect." });
-    }
-
-    const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: "1h" });
-    res.json({ message: "Connexion réussie.", token });
-  } catch (error) {
-    console.error("Erreur lors de la connexion:", error);
-    res.status(500).json({ message: "Erreur interne du serveur." });
-  }
-});
-
-// Middleware pour protéger les routes
-const authenticateToken = (req, res, next) => {
-  const token = req.headers["authorization"]?.split(" ")[1];
-
-  if (!token) {
-    return res.status(401).json({ message: "Token manquant." });
+  // Trouver l'utilisateur par nom d'utilisateur
+  const user = users.find((user) => user.username === username);
+  if (!user || user.password !== password) {
+    return res
+      .status(401)
+      .json({ message: "Nom d'utilisateur ou mot de passe incorrect." });
   }
 
-  jwt.verify(token, JWT_SECRET, (err, user) => {
-    if (err) {
-      return res.status(403).json({ message: "Token invalide." });
-    }
-    req.user = user;
-    next();
-  });
-};
-
-// Exemple de route protégée
-app.get("/api/protected", authenticateToken, (req, res) => {
-  res.json({ message: "Accès autorisé." });
+  res.json({ message: "Connexion réussie." });
 });
 
-// Route principale
+// Routes protégées - Exemples
+app.get("/api/protected", (req, res) => {
+  // Exemple de route protégée simple (sans JWT)
+  res.json({ message: "Accès autorisé à la route protégée." });
+});
+
 app.get("/", (req, res) => {
   const filePath = path.join(__dirname, "public", "projet_perso.html");
   if (!fs.existsSync(filePath)) {
@@ -160,7 +71,7 @@ app.get("/", (req, res) => {
   res.sendFile(filePath);
 });
 
-// Démarrer le serveur
+// Démarrage du serveur
 const startServer = async () => {
   const PORT = process.env.PORT || 3000;
   try {
