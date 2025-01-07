@@ -454,6 +454,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Quadrat Serial";
+  src: url("/fonts/Gotham Black Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -647,7 +654,7 @@
 }
 
 .immortal {
-  font-family: "Quadrat Serial";
+  font-family: "Gotham Black Regular";
 }
 
 .minecraft {

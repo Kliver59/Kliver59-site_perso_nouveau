@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Quadrat Serial";
-  src: url("/fonts/quadrat-serial-regular.ttf") format("truetype");
+  src: url("/fonts/Gotham Black Regular.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -69,7 +69,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh; /* S'assurer que le body occupe toute la hauteur de la fenêtre */
-  background-image: url("/images/immortal_fénix_rising.jpeg"); /* Remplacer par le chemin de ton image */
+  background-image: url("/images/beyond_two_souls.jpeg"); /* Remplacer par le chemin de ton image */
   background-size: cover; /* L'image couvre toute la page sans déformation */
   background-position: center; /* L'image est centrée */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
