@@ -309,7 +309,7 @@
 
 @font-face {
   font-family: "Rayman";
-  src: url("/fonts/Rayman.ttf") format("truetype");
+  src: url("/fonts/Narcissus Roman.otf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -457,6 +457,13 @@
 @font-face {
   font-family: "Quadrat Serial";
   src: url("/fonts/Gotham Black Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("/fonts/gothicb.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -654,7 +661,7 @@
 }
 
 .immortal {
-  font-family: "Gotham Black Regular";
+  font-family: "Quadrat Serial";
 }
 
 .minecraft {
