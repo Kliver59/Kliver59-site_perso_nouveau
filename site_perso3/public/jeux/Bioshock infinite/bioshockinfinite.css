@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "BTTTRIAL";
-  src: url("/fonts/BTTTRIAL.otf") format("truetype");
+  font-family: "Minecraft";
+  src: url("/fonts/gothicb.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -21,11 +21,12 @@
 .Nav-Bar a {
   color: white;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   padding: 8px 16px;
 }
 
 .Nav-Bar a:hover {
+  background-color: #575757;
   color: yellow;
 }
 
@@ -63,12 +64,12 @@
 }
 
 body {
-  font-family: "BTTTRIAL", sans-serif;
+  font-family: "Minecraft", sans-serif;
   font-size: xx-large;
   margin: 0;
   padding: 0;
   height: 100vh; /* S'assurer que le body occupe toute la hauteur de la fenêtre */
-  background-image: url("/images/sea_of_thieves.jpg"); /* Remplacer par le chemin de ton image */
+  background-image: url("/images/bioshockinfinite.jpg"); /* Remplacer par le chemin de ton image */
   background-size: cover; /* L'image couvre toute la page sans déformation */
   background-position: center; /* L'image est centrée */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
