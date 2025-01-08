@@ -10,52 +10,35 @@
   <header>
     <nav class="Nav-Bar">
       <div class="container">
-        <a
-          href="/projet_perso.html"
-          class="audio-link"
-          data-hover-audio="/musiques/uncharted_sound_effect.mp3"
-          >Accueil</a
+        <a href="/projet_perso.html" class="sword-link">Accueil</a>
+        <a href="/liste_de_jeux_vidéos.html" class="sword-link"
+          >Listes de Jeux Videos</a
         >
-        <a
-          href="/liste_de_jeux_vidéos.html"
-          class="audio-link"
-          data-hover-audio="/musiques/uncharted_sound_effect.mp3"
+        <a href="/jeux_vidéos.html" class="sword-link"
+          >Presentation des prochains jeux videos</a
         >
-          Listes de Jeux Videos
-        </a>
-        <a
-          href="/jeux_vidéos.html"
-          class="audio-link"
-          data-hover-audio="/musiques/uncharted_sound_effect.mp3"
-        >
-          Presentation des prochains jeux videos
-        </a>
-        <a
-          href="/contact.html"
-          class="audio-link"
-          data-hover-audio="/musiques/uncharted_sound_effect.mp3"
-        >
-          Contactez-nous
-        </a>
+        <a href="/contact.html" class="sword-link">Contactez-nous</a>
         <div class="sword"></div>
       </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     </nav>
   </header>
   <body>
     <audio id="background-audio" src="" loop></audio>
 
     <h1 class="video-title">Uncharted 4 - Presentation</h1>
-
-    <iframe
-      class="center-left-video"
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/RP_Jcv7cgcY?si=OV3RCHWIUpL70-_5"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
+    <div class="content-container">
+      <iframe
+        class="center-video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/RP_Jcv7cgcY?si=OV3RCHWIUpL70-_5"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
   </body>
 </html>
