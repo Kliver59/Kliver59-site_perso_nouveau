@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -20,6 +20,7 @@
         <a href="/contact.html" class="sword-link">Contactez-nous</a>
         <div class="sword"></div>
       </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     </nav>
   </header>
   <body>
@@ -30,13 +31,18 @@
     ></audio>
 
     <h1 class="video-title">Watch Dogs Legion - Presentation</h1>
-
-    <video class="center-left-video" width="640" height="360" controls>
-      <source
-        src="/vidéos/Watch Dogs  Legion - Trailer dhistoire [OFFICIEL] VF.mp4"
-        type="video/mp4"
-      />
-      Votre navigateur ne supporte pas la balise vidéo.
-    </video>
+    <div class="content-container">
+      <iframe
+        class="center-video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/3YWAwMM66t0?si=SMT9-WSvFFcngwtX"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
   </body>
 </html>
