@@ -468,6 +468,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Business As Usual";
+  src: url("/fonts/DK Business As Usual.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -726,4 +733,8 @@
 
 .reddead {
   font-family: "chinese rocks rg";
+}
+
+.lifeisstrange {
+  font-family: "Business As Usual";
 }
