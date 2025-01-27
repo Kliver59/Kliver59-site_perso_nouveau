@@ -7,26 +7,24 @@
     <link rel="stylesheet" href="/jeux/Grand Theft Auto 5/gta5.css" />
     <script type="module" src="/jeux/Grand Theft Auto 5/gta5.js"></script>
   </head>
-  <header>
-    <nav class="Nav-Bar">
-      <div class="container">
-        <a href="/projet_perso.html" class="sword-link">Accueil</a>
-        <a href="/liste_de_jeux_vidéos.html" class="sword-link"
-          >Listes de Jeux Videos</a
-        >
-        <a href="/jeux_vidéos.html" class="sword-link"
-          >Presentation des prochains jeux videos</a
-        >
-        <a href="/contact.html" class="sword-link">Contactez-nous</a>
-        <div class="sword"></div>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    </nav>
-  </header>
   <body>
-    <audio id="background-audio" src="" loop></audio>
+    <header>
+      <nav class="Nav-Bar">
+        <div class="container">
+          <a href="/projet_perso.html" class="sword-link">Accueil</a>
+          <a href="/liste_de_jeux_vidéos.html" class="sword-link"
+            >Liste des Jeux Vidéos</a
+          >
+          <a href="/jeux_vidéos.html" class="sword-link">Prochains Jeux</a>
+          <a href="/contact.html" class="sword-link">Contact</a>
+          <div class="sword"></div>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      </nav>
+    </header>
 
-    <h1 class="video-title">Grand Theft Auto 5 - Presentation</h1>
+    <h1 class="video-title">Grand Theft Auto 5 - Présentation</h1>
+
     <div class="content-container">
       <iframe
         class="center-video"
@@ -39,6 +37,27 @@
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
+    </div>
+
+    <section class="game-description">
+      <h2>À propos de Grand Theft Auto 5</h2>
+      <p>
+        Explorez un monde vaste et richement détaillé avec Grand Theft Auto 5.
+        Suivez les aventures de trois personnages distincts dans la ville
+        fictive de Los Santos. Un jeu mêlant action, aventure et liberté totale.
+      </p>
+      <div class="game-image-container">
+        <img src="/images/gta.jpg" alt="Personnage GTA 5" class="game-image" />
+      </div>
+    </section>
+
+    <div class="music-controls">
+      <button id="play-music" class="music-button">▶️ Play Music</button>
+      <button id="pause-music" class="music-button">⏸️ Pause Music</button>
+    </div>
+
+    <div class="progress-container">
+      <input type="range" id="music-progress" min="0" max="100" value="0" />
     </div>
   </body>
 </html>
