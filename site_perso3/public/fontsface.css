@@ -475,6 +475,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Bills Mafia";
+  src: url("/fonts/Bills Mafia.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Guardians";
+  src: url("/fonts/Guardians.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -737,4 +751,12 @@
 
 .lifeisstrange {
   font-family: "Business As Usual";
+}
+
+.mafia {
+  font-family: "Bills Mafia", sans-serif;
+}
+
+.guardians {
+  font-family: "Guardians", sans-serif;
 }
