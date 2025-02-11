@@ -524,6 +524,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "LEMONMILK-Light";
+  src: url("/fonts/LEMONMILK-Light.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -814,4 +821,8 @@
 
 .spiritofthenorth {
   font-family: "Norse-KaWl", sans-serif;
+}
+
+.deliverusmars {
+  font-family: "LEMONMILK-Light", sans-serif;
 }
