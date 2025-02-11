@@ -503,6 +503,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Quadrat Grotesk New W01 Black";
+  src: url("/fonts/Quadrat Grotesk New W01 Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MiddleEarthPersonalUseRegular-axlP5";
+  src: url("/fonts/MiddleEarthPersonalUseRegular-axlP5.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Norse-KaWl";
+  src: url("/fonts/Norse-KaWl.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -781,4 +802,16 @@
 
 .quarry {
   font-family: "Another Danger", sans-serif;
+}
+
+.sifu {
+  font-family: "Quadrat Grotesk New W01 Black", sans-serif;
+}
+
+.moria {
+  font-family: "MiddleEarthPersonalUseRegular-axlP5", sans-serif;
+}
+
+.spiritofthenorth {
+  font-family: "Norse-KaWl", sans-serif;
 }

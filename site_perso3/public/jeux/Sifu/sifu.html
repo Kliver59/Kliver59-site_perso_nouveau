@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sifu</title>
+    <link rel="stylesheet" href="/jeux/Sifu/sifu.css" />
+    <script type="module" src="/jeux/sifu/sifu.js"></script>
+  </head>
+  <header>
+    <nav class="Nav-Bar">
+      <div class="container">
+        <a href="/projet_perso.html" class="sword-link">Accueil</a>
+        <a href="/liste_de_jeux_vidéos.html" class="sword-link"
+          >Listes de Jeux Videos</a
+        >
+        <a href="/jeux_vidéos.html" class="sword-link"
+          >Presentation des prochains jeux videos</a
+        >
+        <a href="/contact.html" class="sword-link">Contactez-nous</a>
+        <div class="sword"></div>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+  <body>
+    <audio id="background-audio" src="" loop></audio>
+
+    <h1 class="video-title">Sifu - Presentation</h1>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item active">
+          <iframe
+            class="carousel-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/T7vBUygMcs0?si=x1A0KWD-SFvP5CRM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="carousel-item active">
+          <iframe
+            class="carousel-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/T6zNTcSY0Sw?si=IqH1aKfGztWFhKaJ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <button class="carousel-button prev-button">&#10094;</button>
+      <button class="carousel-button next-button">&#10095;</button>
+    </div>
+
+    <script src="/jeux/LittleHope/carousel.js"></script>
+  </body>
+</html>
