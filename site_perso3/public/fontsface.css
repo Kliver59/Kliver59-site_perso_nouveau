@@ -489,6 +489,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "ChloOuiOui";
+  src: url("/fonts/ChloOuiOui.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Another Danger";
+  src: url("/fonts/Another Danger - Demo.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -759,4 +773,12 @@
 
 .guardians {
   font-family: "Guardians", sans-serif;
+}
+
+.tellmewhy {
+  font-family: "ChloOuiOui", sans-serif;
+}
+
+.quarry {
+  font-family: "Another Danger", sans-serif;
 }
