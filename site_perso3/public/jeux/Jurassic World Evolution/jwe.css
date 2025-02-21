@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "JurassicPark-BL48";
+  src: url("/fonts/JurassicPark-BL48.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.Nav-Bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.Nav-Bar .container {
+  display: flex;
+  gap: 15px;
+}
+
+.Nav-Bar a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 8px 16px;
+}
+
+.Nav-Bar a:hover {
+  background-color: #575757;
+  color: yellow;
+}
+
+/* Bouton de menu pour le responsive */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Animation de l'épée */
+.sword {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  width: 50px;
+  height: 50px;
+  background-image: url("/images/2281334.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.container:hover .sword {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-250%) rotate(45deg);
+}
+
+body {
+  font-family: "JurassicPark-BL48", sans-serif;
+  font-size: xx-large;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* S'assurer que le body occupe toute la hauteur de la fenêtre */
+  background-image: url("/images/jurassicworldevolution.jpg"); /* Remplacer par le chemin de ton image */
+  background-size: cover; /* L'image couvre toute la page sans déformation */
+  background-position: center; /* L'image est centrée */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-attachment: fixed; /* Optionnel : pour que l'image reste fixe lors du défilement */
+}
+
+.video-title {
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  max-width: 640px;
+  border-radius: 8px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 640px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  display: none;
+  justify-content: center;
+}
+
+.carousel-item.active {
+  display: flex;
+}
+
+.carousel-video {
+  width: 100%;
+  height: 360px;
+  border-radius: 10px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .Nav-Bar .container {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .Nav-Bar.open .container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .center-video {
+    width: 90%;
+    height: auto;
+  }
+
+  .video-title {
+    font-size: 1.2em;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-title {
+    font-size: 1em;
+  }
+
+  .Nav-Bar a {
+    font-size: 20px;
+  }
+}

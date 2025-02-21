@@ -538,6 +538,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "JurassicPark-BL48";
+  src: url("/fonts/JurassicPark-BL48.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -836,4 +843,8 @@
 
 .deathstranding {
   font-family: "Sackers Gothic Light AT Regular", sans-serif;
+}
+
+.jurassic {
+  font-family: "JurassicPark-BL48", sans-serif;
 }
