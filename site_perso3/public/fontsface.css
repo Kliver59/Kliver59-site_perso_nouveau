@@ -531,6 +531,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Sackers Gothic Light AT Regular";
+  src: url("/fonts/Sackers Gothic Light AT Regular.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -825,4 +832,8 @@
 
 .deliverusmars {
   font-family: "LEMONMILK-Light", sans-serif;
+}
+
+.deathstranding {
+  font-family: "Sackers Gothic Light AT Regular", sans-serif;
 }
