@@ -545,6 +545,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Decade__";
+  src: url("/fonts/Decade__.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -847,4 +854,8 @@
 
 .jurassic {
   font-family: "JurassicPark-BL48", sans-serif;
+}
+
+.deadisland {
+  font-family: "Decade__", sans-serif;
 }
