@@ -1,6 +1,7 @@
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-family: "RESIDENT EVIL 4 REMAKE FONT";
+  src: url("/fonts/resident_evil_4_remake_font_by_snakeyboy_df7kacs.ttf")
+    format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -64,12 +65,12 @@
 }
 
 body {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "RESIDENT EVIL 4 REMAKE FONT", sans-serif;
   font-size: xx-large;
   margin: 0;
   padding: 0;
   height: 100vh; /* S'assurer que le body occupe toute la hauteur de la fenêtre */
-  background-image: url("/images/dying_light2.jpg"); /* Remplacer par le chemin de ton image */
+  background-image: url("/images/re7.jpg"); /* Remplacer par le chemin de ton image */
   background-size: cover; /* L'image couvre toute la page sans déformation */
   background-position: center; /* L'image est centrée */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
