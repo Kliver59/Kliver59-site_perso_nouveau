@@ -552,6 +552,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "BoldmattePersonalUseOnly-7BZj4";
+  src: url("/fonts/BoldmattePersonalUseOnly-7BZj4.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -858,4 +865,8 @@
 
 .deadisland {
   font-family: "Decade__", sans-serif;
+}
+
+.funkofusion {
+  font-family: "BoldmattePersonalUseOnly-7BZj4", sans-serif;
 }
