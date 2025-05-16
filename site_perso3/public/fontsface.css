@@ -559,6 +559,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Streamline Light";
+  src: url("/fonts/Streamline Light.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 .alien {
   font-family: "sevastopol interface", "sans serif";
 }
@@ -869,4 +876,8 @@
 
 .funkofusion {
   font-family: "BoldmattePersonalUseOnly-7BZj4", sans-serif;
+}
+
+.lanoire {
+  font-family: "Streamline Light", sans-serif;
 }
